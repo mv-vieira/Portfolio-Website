@@ -1,0 +1,33 @@
+.about{
+  background-color: var(--root-grey);
+  min-width: auto;
+  min-height: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.about h1{
+  color: #f2f2f2;
+  margin-bottom: 1.1rem;
+  position: relative;
+  display: inline-block;
+  font-size: 3.5rem;
+}
+
+.about h1::after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -45%;
+  width: 40%;
+  height: 3px;
+  background-color: var(--root-blue);
+}
+
+.about p{
+  color: #d4d4d4;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  padding: 5px;
+  text-align: justify;
+}
