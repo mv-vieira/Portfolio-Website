@@ -8,7 +8,10 @@ const routes: Routes = [
       .then(module => module.PortfolioSectionModule)},
 
   {path:'about-me', loadChildren: ()=> import('./about-me/about-me.module')
-      .then(module => module.AboutMeModule)}
+      .then(module => module.AboutMeModule)},
+
+  {path:'skills', loadChildren: ()=> import('./skills/skills.module')
+      .then(module => module.SkillsModule)}
 ];
 
 @NgModule({
