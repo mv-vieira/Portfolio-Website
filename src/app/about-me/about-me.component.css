@@ -10,8 +10,19 @@
   flex-direction: column;
 }
 
+.about-title{
+  width: auto;
+  background-color: var(--root-grey);
+  border-radius: 10px;
+  text-align: center;
+  padding: 3px 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-.about h1{
+
+.about-title h1{
 
     position: relative;
     padding: 5px;
@@ -36,7 +47,7 @@
   }
 
 
-.about h1::after, .about h1::before{
+.about-title h1::after, .about-title h1::before{
   content: " ";
   display: block;
   margin: 10px 0 10px 0;
@@ -51,7 +62,7 @@
   letter-spacing: 0.5px;
   padding: 10px;
   text-align: justify;
-  max-width: 600px;
+  max-width: 750px;
 
 }
 
