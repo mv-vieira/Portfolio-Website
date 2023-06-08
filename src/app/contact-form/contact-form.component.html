@@ -5,15 +5,23 @@
   </div>
 
   <div class="form-contact">
-    <form action="https://api.staticforms.xyz/submit" method="post">
+    <form action="https://api.staticforms.xyz/submit"
+    [formGroup]="contactForm"
+    #formDir = "ngForm"
+    (ngSubmit)="submit()"
+    method="post">
 
         <input type="hidden" name="accessKey" value="ced16be7-346f-43b3-a3db-17b44f6fe0b3">
+        <input type="text" name="honeypot" style="display: none;">
 
         <label for="name" class="form-name">Nome:</label>
         <input type="text"
         placeholder="Digite seu nome"
         formControlName="nome"
         >
+        <div *ngIf="nome.invalid && formDir.submitted" class="invalid">
+          <small>O campo nome é obrigatório</small>
+        </div>
 
 
         <label for="email" class="form-email">Email:</label>
@@ -21,22 +29,29 @@
         placeholder="me@example.com"
         formControlName="email"
         >
+        <div *ngIf="email.invalid && formDir.submitted" class="invalid">
+          <small>O email é obrigatório.</small>
+        </div>
 
         <label for="assunto" class="form-assunto">Assunto:</label>
         <input type="text" name="subject"
         placeholder="Insira o assunto"
         formControlName="assunto"
         >
+        <div *ngIf="assunto.invalid && formDir.submitted" class="invalid">
+          <small>Campo assunto é obrigatório</small>
+        </div>
 
         <label for="text-area" class="form-email">Mensagem:</label>
         <textarea name="mensagem" cols="30" rows="8"
          placeholder="Digite aqui sua mensagem!"
-         formControlName="nome"
+         formControlName="textarea"
          >
         </textarea>
 
-        <div>
-          <button type="submit">Enviar Mensagem</button>
+        <div class="button">
+          <input type="hidden" name="redirectTo" value="https://portfolio-website-sandy-five.vercel.app/about-me"> <!-- Optional -->
+          <input type="submit" value="Enviar Mensagem" />
         </div>
 
 
