@@ -1,0 +1,142 @@
+.container{
+  background-color: var(--root-grey);
+  max-width: auto;
+  min-height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 3px 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title{
+  width: auto;
+  background-color: var(--root-grey);
+  border-radius: 10px;
+  text-align: center;
+  padding: 3px 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-title h1{
+
+  position: relative;
+  padding: 5px;
+  margin: 10px;
+  font-weight: 500;
+  font-size: 40px;
+  color: #d4d4d4;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+
+.contact-title h1::after, .contact-title h1::before{
+content: " ";
+display: block;
+margin: 10px 0 10px 0;
+border-bottom: 3px solid var(--root-blue);
+background-color:#f8f8f8;
+}
+
+.form-contact{
+  display: flex;
+  width: auto;
+  max-width: auto;
+  margin: 0 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-contact form{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  height: 650px;
+  max-width: 70%;
+  padding: 10px;
+  -webkit-box-shadow: 14px 12px 33px 4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 14px 12px 33px 4px rgba(0,0,0,0.75);
+  box-shadow: 14px 12px 33px 4px rgba(0,0,0,0.75);
+}
+
+form label{
+  font-size: 17px;
+  text-align: justify;
+  width: 100px;
+  margin-bottom: 5px;
+  color: #f8f8f8;
+}
+
+form input{
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border: 2px solid #d4d4d4;
+  background-color: #d4d4d4;
+  transition: 0.2s ease-out;
+}
+
+form input:focus{
+  border: 2px solid var(--root-blue);
+  background-color: var(--root-grey);
+  color: #d4d4d4;
+}
+
+
+form textarea{
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 15px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border: 2px solid #d4d4d4;
+  background-color: #d4d4d4;
+  transition: 0.2s ease-out;
+}
+
+form textarea:focus{
+  border: 2px solid var(--root-blue);
+  background-color: var(--root-grey);
+  color: #d4d4d4;
+}
+
+button{
+  padding: 10px;
+  margin-top: 20px;
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: #d4d4d4;
+  transition: 0.5s ease-out;
+}
+
+button:hover{
+  background-color: var(--root-blue);
+  color: #f8f8f8;
+}
+
+
