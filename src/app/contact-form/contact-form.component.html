@@ -5,17 +5,16 @@
   </div>
 
   <div class="form-contact">
-    <form action="https://api.staticforms.xyz/submit"
+
+    <form action="javascript:void(0);"
+    method="POST"
     [formGroup]="contactForm"
     #formDir = "ngForm"
-    (ngSubmit)="submit()"
-    method="post">
-
-        <input type="hidden" name="accessKey" value="ced16be7-346f-43b3-a3db-17b44f6fe0b3">
-        <input type="text" name="honeypot" style="display: none;">
-
+    (ngSubmit)="enviarEmail()"
+    >
         <label for="name" class="form-name">Nome:</label>
         <input type="text"
+        id="name"
         placeholder="Digite seu nome"
         formControlName="nome"
         >
@@ -26,6 +25,7 @@
 
         <label for="email" class="form-email">Email:</label>
         <input type="email"
+        id="email"
         placeholder="me@example.com"
         formControlName="email"
         >
@@ -35,6 +35,7 @@
 
         <label for="assunto" class="form-assunto">Assunto:</label>
         <input type="text" name="subject"
+        id="assunto"
         placeholder="Insira o assunto"
         formControlName="assunto"
         >
@@ -44,20 +45,16 @@
 
         <label for="text-area" class="form-email">Mensagem:</label>
         <textarea name="mensagem" cols="30" rows="8"
+         id="text-area"
          placeholder="Digite aqui sua mensagem!"
          formControlName="textarea"
          >
         </textarea>
 
         <div class="button">
-          <input type="hidden" name="redirectTo" value="https://portfolio-website-sandy-five.vercel.app/about-me"> <!-- Optional -->
           <input type="submit" value="Enviar Mensagem" />
         </div>
-
-
-
-
-
     </form>
+
   </div>
 </div>

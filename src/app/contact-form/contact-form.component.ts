@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import emailjs  from '@emailjs/browser';
 
 
 @Component({
@@ -10,15 +11,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactFormComponent implements OnInit {
 
   contactForm!: FormGroup;
-
-  submit(){
-    if(this.contactForm.invalid){
-      return;
-    }
-
-    console.log("Formulário enviado!")
-  }
-
 
   constructor(){ }
 
@@ -41,6 +33,32 @@ export class ContactFormComponent implements OnInit {
 
   get assunto(){
     return this.contactForm.get(['assunto'])!;
+  }
+
+
+  async enviarEmail(){
+
+    if(this.contactForm.invalid){
+      return;
+
+    } else {
+
+      emailjs.init("Zqd5xA-uvrYz4avtl");
+      let response = await emailjs.send("service_jyny5v7","template_dnr6gjl",{
+        from_name: this.contactForm.value.nome,
+        to_name: "Matheus",
+        email: this.contactForm.value.email,
+        assunto: this.contactForm.value.assunto,
+        message: this.contactForm.value.textarea,
+        });
+
+        alert("Mensagem enviada com sucesso!");
+
+        this.contactForm.reset;
+    }
+
+
+
   }
 
 
