@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import emailjs  from '@emailjs/browser';
+import { Router } from '@angular/router';
+import emailjs from '@emailjs/browser';
 
 
 @Component({
@@ -12,7 +13,9 @@ export class ContactFormComponent implements OnInit {
 
   contactForm!: FormGroup;
 
-  constructor(){ }
+  constructor(
+    private route: Router
+  ){ }
 
   ngOnInit(): void {
     this.contactForm = new FormGroup({
@@ -52,9 +55,11 @@ export class ContactFormComponent implements OnInit {
         message: this.contactForm.value.textarea,
         });
 
-        alert("Mensagem enviada com sucesso!");
 
-        this.contactForm.reset;
+        alert("Mensagem enviada com sucesso!");
+        
+        this.route.navigate(["about-me"]);
+
     }
 
 
