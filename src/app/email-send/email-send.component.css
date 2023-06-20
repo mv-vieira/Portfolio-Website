@@ -1,0 +1,52 @@
+.container{
+  background-color: var(--root-grey);
+  max-width: auto;
+  min-height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 3px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.logo-email{
+  display: flex;
+  position: relative;
+  top: 5rem;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+.logo-email img{
+  width: 250px;
+}
+
+.logo-email span{
+  color: #fff;
+  font-size: 2.0rem;
+  margin-top: 2rem;
+}
+
+.logo-email p{
+  color: #fff;
+  margin-top: 1.3rem;
+}
+
+.logo-email button{
+  padding: 10px;
+  margin-top: 20px;
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: #d4d4d4;
+  transition: 0.5s ease-out;
+}
+
+.logo-email button:hover{
+    background-color: var(--root-blue);
+    color: #f8f8f8;
+}

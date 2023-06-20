@@ -55,10 +55,7 @@ export class ContactFormComponent implements OnInit {
         message: this.contactForm.value.textarea,
         });
 
-
-        alert("Mensagem enviada com sucesso!");
-        
-        this.route.navigate(["about-me"]);
+        this.route.navigate(["email-send"]);
 
     }
 

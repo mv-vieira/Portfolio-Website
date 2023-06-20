@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  hamburguer: any = document.querySelector(".hamburguer");
+
+  hamburguerClick(){
+    let navbar  = document.querySelector(".nav-bar");
+    navbar?.classList.toggle("active");
+    
+  }
+
+  constructor(){}
 }

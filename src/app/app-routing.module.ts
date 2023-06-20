@@ -33,6 +33,22 @@ const routes: Routes = [
         (module) => module.ContactFormModule
       ),
   },
+
+  {
+    path: 'email-send',
+    loadChildren: () =>
+      import('./email-send/email-send.module').then(
+        (module) => module.EmailSendModule
+      ),
+  },
+
+  {
+    path:'**',
+    loadChildren: () =>
+      import('./page-not-found/page-not-found.module').then(
+        (module) => module.PageNotFoundModule
+      )
+  }
 ];
 
 @NgModule({

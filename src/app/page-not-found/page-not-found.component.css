@@ -1,0 +1,52 @@
+.container{
+  background-color: var(--root-grey);
+  max-width: auto;
+  min-height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 3px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.page-not-found-container{
+  display: flex;
+  position: relative;
+  top: 5rem;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+.page-not-found-container img{
+  width: 250px;
+}
+
+.page-not-found-container span{
+  color: #fff;
+  font-size: 2.0rem;
+  margin-top: 2rem;
+}
+
+.page-not-found-container p{
+  color: #fff;
+  margin-top: 1.3rem;
+}
+
+.page-not-found-container button{
+  padding: 10px;
+  margin-top: 20px;
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: #d4d4d4;
+  transition: 0.5s ease-out;
+}
+
+.page-not-found-container button:hover{
+    background-color: var(--root-blue);
+    color: #f8f8f8;
+}
